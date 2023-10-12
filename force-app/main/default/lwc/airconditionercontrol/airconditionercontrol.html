@@ -1,0 +1,26 @@
+<!-- airConditionerControl.html -->
+<template>
+    <div class="air-conditioner-control">
+      <div class="control-item">
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" value={targetTemperature} oninput={handleTemperatureChange} />
+      </div>
+      <div class="control-item">
+        <label for="mode">Mode:</label>
+        <select id="mode" value={selectedMode} onchange={handleModeChange}>
+          <option value="cooling">Cooling</option>
+          <option value="heating">Heating</option>
+          <option value="fan-only">Fan Only</option>
+        </select>
+      </div>
+      <div class="control-item">
+        <label for="fan-speed">Fan Speed:</label>
+        <select id="fan-speed" value={selectedFanSpeed} onchange={handleFanSpeedChange}>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+    </div>
+  </template>
+  
